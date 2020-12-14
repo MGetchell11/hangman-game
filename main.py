@@ -1,5 +1,6 @@
 import random
 import wordslist
+import sys
 
 # Pick random word from wordslist.py
 word = random.choice(wordslist.words_list)
@@ -8,18 +9,17 @@ word = random.choice(wordslist.words_list)
 string_to_list = list(word)
 print(string_to_list)
 
-
 # Empty string for correct letters
 num_asterisks = len(word) * "_"
 empty_word = list(num_asterisks)
 print(empty_word)
 
-
-
 # User input loop
 # Find indexes of correct letters and replace the blank spaces with correct letters
-while True:
-    def user_input():
+
+def game():
+    wrong_answers = 0
+    while True:
         guess = input("pick a letter\n")
         if guess in string_to_list:
             all_indexes = []
@@ -28,13 +28,20 @@ while True:
                     all_indexes.append(i)
                     empty_word[i] = guess
                     print(empty_word)
+                    if "_" not in empty_word:
+                        print("You win!")
+                        sys.exit()
+                    else:
+                        continue
+                else:
+                    continue
         else:
-            attempt = 0
-            while attempt > 6:
-                attempt = attempt + 1
-                print(attempt)
-
-
-    user_input()
+            wrong_answers += 1
+            print(wrong_answers)
+            if wrong_answers == 6:
+                print("You lost")
+                sys.exit()
+            continue
+game()
 
 # 6 wrong guesses and the game is over
