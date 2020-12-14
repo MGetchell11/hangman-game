@@ -14,16 +14,27 @@ num_asterisks = len(word) * "_"
 empty_word = list(num_asterisks)
 print(empty_word)
 
+
+
 # User input loop
+# Find indexes of correct letters and replace the blank spaces with correct letters
 while True:
     def user_input():
         guess = input("pick a letter\n")
         if guess in string_to_list:
-            index = word.index(guess)
-            empty_word[index] = guess
-            print(empty_word)
+            all_indexes = []
+            for i in range(0, len(string_to_list)):
+                if string_to_list[i] == guess:
+                    all_indexes.append(i)
+                    empty_word[i] = guess
+                    print(empty_word)
         else:
-            print("wrong answer")
+            attempt = 0
+            while attempt > 6:
+                attempt = attempt + 1
+                print(attempt)
+
+
     user_input()
 
-# 6 questions will complete hangman and game is over
+# 6 wrong guesses and the game is over
