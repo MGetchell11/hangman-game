@@ -8,7 +8,7 @@ word = random.choice(wordslist.words_list)
 
 # Split word from string into list
 string_to_list = list(word)
-print(string_to_list)
+# print(string_to_list)
 
 # Empty string for correct letters
 num_asterisks = len(word) * "_"
@@ -21,7 +21,8 @@ print(empty_word)
 def game():
     wrong_answers = 0
     while True:
-        guess = input("pick a letter\n")
+        guess = input("Pick a letter\n")
+        print("\n")
         if guess in string_to_list:
             all_indexes = []
             for i in range(0, len(string_to_list)):
@@ -38,7 +39,8 @@ def game():
                     continue
         else:
             wrong_answers += 1
-            print(wrong_answers)
+            # print(wrong_answers)
+            print("Wrong answer\n")
             if wrong_answers == 0:
                 continue
             elif wrong_answers == 1:
