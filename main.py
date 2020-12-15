@@ -1,6 +1,7 @@
 import random
 import wordslist
 import sys
+import graphic
 
 # Pick random word from wordslist.py
 word = random.choice(wordslist.words_list)
@@ -38,10 +39,26 @@ def game():
         else:
             wrong_answers += 1
             print(wrong_answers)
-            if wrong_answers == 6:
-                print("You lost")
+            if wrong_answers == 0:
+                continue
+            elif wrong_answers == 1:
+                graphic.first_wrong()
+                continue
+            elif wrong_answers == 2:
+                graphic.second_wrong()
+                continue
+            elif wrong_answers == 3:
+                graphic.third_wrong()
+                continue
+            elif wrong_answers == 4:
+                graphic.fourth_wrong()
+                continue
+            elif wrong_answers == 5:
+                graphic.fifth_wrong()
+                continue
+            elif wrong_answers == 6:
+                graphic.sixth_wrong()
+                print("You Lost")
                 sys.exit()
             continue
 game()
-
-# 6 wrong guesses and the game is over
