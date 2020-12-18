@@ -22,7 +22,6 @@ def game():
     wrong_answers = 0
     while True:
         guess = input("Pick a letter\n")
-        print("\n")
         if guess in string_to_list:
             all_indexes = []
             for i in range(0, len(string_to_list)):
