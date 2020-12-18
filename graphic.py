@@ -3,8 +3,11 @@ import time
 
 def first_wrong():
     wn = turtle.Screen()
+    wn.bgcolor("black")
     tom = turtle.Turtle()
     tom.speed(2)
+    tom.color("white")
+    tom.hideturtle()
     wn.title("Hangman")
     # Torso
     tom.right(90)
@@ -14,8 +17,11 @@ def first_wrong():
 
 def second_wrong():
     wn = turtle.Screen()
+    wn.bgcolor("black")
     tom = turtle.Turtle()
     tom.speed(2)
+    tom.color("white")
+    tom.hideturtle()
     wn.title("Hangman")
     # Torso
     tom.right(90)
@@ -32,8 +38,11 @@ def second_wrong():
 
 def third_wrong():
     wn = turtle.Screen()
+    wn.bgcolor("black")
     tom = turtle.Turtle()
     tom.speed(2)
+    tom.color("white")
+    tom.hideturtle()
     wn.title("Hangman")
     # Torso
     tom.right(90)
@@ -57,8 +66,11 @@ def third_wrong():
 
 def fourth_wrong():
     wn = turtle.Screen()
+    wn.bgcolor("black")
     tom = turtle.Turtle()
     tom.speed(2)
+    tom.color("white")
+    tom.hideturtle()
     wn.title("Hangman")
     # Torso
     tom.right(90)
@@ -87,8 +99,11 @@ def fourth_wrong():
 
 def fifth_wrong():
     wn = turtle.Screen()
+    wn.bgcolor("black")
     tom = turtle.Turtle()
     tom.speed(2)
+    tom.color("white")
+    tom.hideturtle()
     wn.title("Hangman")
     # Torso
     tom.right(90)
@@ -122,8 +137,11 @@ def fifth_wrong():
 
 def sixth_wrong():
     wn = turtle.Screen()
+    wn.bgcolor("black")
     tom = turtle.Turtle()
     tom.speed(2)
+    tom.color("white")
+    tom.hideturtle()
     wn.title("Hangman")
     # Torso
     tom.right(90)
